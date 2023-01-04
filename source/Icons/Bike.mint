@@ -1,41 +1,48 @@
 component Tabler.IconBike {
+  property scale : Number = 1
+  property animation : Tabler.Animation = Tabler.Animation::None
+  property speed : Tabler.Speed = Tabler.Speed::Slow
+  property hover : Bool = false
+  property flip : Tabler.Flip = Tabler.Flip::None
+  property stroke : String = "currentColor"
+  property fill : String = "none"
+  property label : String = ""
+  property title : String = ""
+
   fun render : Html {
-    <Tabler>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-bike"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
+    <Tabler
+      scale={scale}
+      animation={animation}
+      speed={speed}
+      hover={hover}
+      flip={flip}
+      stroke={stroke}
+      fill={fill}
+      label={label}
+      title={title}>
 
-        <path
-          stroke="none"
-          d="M0 0h24v24H0z"
-          fill="none"/>
+      <path
+        stroke="none"
+        d="M0 0h24v24H0z"
+        fill="none"/>
 
-        <circle
-          cx="5"
-          cy="18"
-          r="3"/>
+      <circle
+        cx="5"
+        cy="18"
+        r="3"/>
 
-        <circle
-          cx="19"
-          cy="18"
-          r="3"/>
+      <circle
+        cx="19"
+        cy="18"
+        r="3"/>
 
-        <polyline points="12 19 12 15 9 12 14 8 16 11 19 11"/>
+      <polyline points="12 19 12 15 9 12 14 8 16 11 19 11"/>
 
-        <circle
-          cx="17"
-          cy="5"
-          r="1"/>
+      <circle
+        cx="17"
+        cy="5"
+        r="1"/>
 
-      </svg>
     </Tabler>
   }
 }

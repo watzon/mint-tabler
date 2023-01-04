@@ -10,6 +10,17 @@ function pascal_case() {
   echo "$pascal_str"
 }
 
+# Extract the inner contents of an SVG file, removing the outer <svg> tags.
+function extract_svg_content() {
+  local svg_file="$1"
+  local svg_contents="$(cat "$svg_file")"
+  local svg_contents="${svg_contents#*<svg}"
+  svg_contents="${svg_contents#*>}"
+  svg_contents="${svg_contents%</svg>*}"
+  echo "$svg_contents"
+}
+
+
 # Ensure that dependencies are installed
 # Dependencies: curl, unzip
 deps=(curl unzip mint)
@@ -48,11 +59,14 @@ for file in $tmpdir/icons/*.svg; do
 
     echo -ne "\r\e[0K  $pascal_filename.mint"
 
+    # Take the raw svg file and remove the start and end svg tags, leaving only the inner content
+    svg_content=$(extract_svg_content "$file")
+
     # Replace the string IconTemplate in the $template string with the pascal filename
     new_template=$(echo "$template" | sed "s/IconTemplate/Tabler.Icon$pascal_filename/g")
 
     # Use awk to replace the string SVG HERE in the $new_template string with the contents of the svg file, updating the $new_template variable
-    new_template=$(echo "$new_template" | awk -v svg="$(cat "$file")" '{gsub("SVG HERE", svg); print}')
+    new_template=$(echo "$new_template" | awk -v svg="$svg_content" '{gsub("SVG HERE", svg); print}')
 
     # Write the new template to the file
     echo "$new_template" > "source/Icons/$pascal_filename.mint"

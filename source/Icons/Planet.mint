@@ -1,31 +1,38 @@
 component Tabler.IconPlanet {
+  property scale : Number = 1
+  property animation : Tabler.Animation = Tabler.Animation::None
+  property speed : Tabler.Speed = Tabler.Speed::Slow
+  property hover : Bool = false
+  property flip : Tabler.Flip = Tabler.Flip::None
+  property stroke : String = "currentColor"
+  property fill : String = "none"
+  property label : String = ""
+  property title : String = ""
+
   fun render : Html {
-    <Tabler>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-planet"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
+    <Tabler
+      scale={scale}
+      animation={animation}
+      speed={speed}
+      hover={hover}
+      flip={flip}
+      stroke={stroke}
+      fill={fill}
+      label={label}
+      title={title}>
 
-        <path
-          stroke="none"
-          d="M0 0h24v24H0z"
-          fill="none"/>
+      <path
+        stroke="none"
+        d="M0 0h24v24H0z"
+        fill="none"/>
 
-        <path d="M18.816 13.58c2.292 2.138 3.546 4 3.092 4.9c-.745 1.46 -5.783 -.259 -11.255 -3.838c-5.47 -3.579 -9.304 -7.664 -8.56 -9.123c.464 -.91 2.926 -.444 5.803 .805"/>
+      <path d="M18.816 13.58c2.292 2.138 3.546 4 3.092 4.9c-.745 1.46 -5.783 -.259 -11.255 -3.838c-5.47 -3.579 -9.304 -7.664 -8.56 -9.123c.464 -.91 2.926 -.444 5.803 .805"/>
 
-        <circle
-          cx="12"
-          cy="12"
-          r="7"/>
+      <circle
+        cx="12"
+        cy="12"
+        r="7"/>
 
-      </svg>
     </Tabler>
   }
 }

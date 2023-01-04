@@ -1,31 +1,38 @@
 component Tabler.IconSun {
+  property scale : Number = 1
+  property animation : Tabler.Animation = Tabler.Animation::None
+  property speed : Tabler.Speed = Tabler.Speed::Slow
+  property hover : Bool = false
+  property flip : Tabler.Flip = Tabler.Flip::None
+  property stroke : String = "currentColor"
+  property fill : String = "none"
+  property label : String = ""
+  property title : String = ""
+
   fun render : Html {
-    <Tabler>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-sun"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
+    <Tabler
+      scale={scale}
+      animation={animation}
+      speed={speed}
+      hover={hover}
+      flip={flip}
+      stroke={stroke}
+      fill={fill}
+      label={label}
+      title={title}>
 
-        <path
-          stroke="none"
-          d="M0 0h24v24H0z"
-          fill="none"/>
+      <path
+        stroke="none"
+        d="M0 0h24v24H0z"
+        fill="none"/>
 
-        <circle
-          cx="12"
-          cy="12"
-          r="4"/>
+      <circle
+        cx="12"
+        cy="12"
+        r="4"/>
 
-        <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/>
+      <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/>
 
-      </svg>
     </Tabler>
   }
 }

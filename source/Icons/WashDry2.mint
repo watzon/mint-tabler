@@ -1,39 +1,46 @@
 component Tabler.IconWashDry2 {
+  property scale : Number = 1
+  property animation : Tabler.Animation = Tabler.Animation::None
+  property speed : Tabler.Speed = Tabler.Speed::Slow
+  property hover : Bool = false
+  property flip : Tabler.Flip = Tabler.Flip::None
+  property stroke : String = "currentColor"
+  property fill : String = "none"
+  property label : String = ""
+  property title : String = ""
+
   fun render : Html {
-    <Tabler>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-wash-dry-2"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
+    <Tabler
+      scale={scale}
+      animation={animation}
+      speed={speed}
+      hover={hover}
+      flip={flip}
+      stroke={stroke}
+      fill={fill}
+      label={label}
+      title={title}>
 
-        <path
-          stroke="none"
-          d="M0 0h24v24H0z"
-          fill="none"/>
+      <path
+        stroke="none"
+        d="M0 0h24v24H0z"
+        fill="none"/>
 
-        <rect
-          x="3"
-          y="3"
-          width="18"
-          height="18"
-          rx="3"/>
+      <rect
+        x="3"
+        y="3"
+        width="18"
+        height="18"
+        rx="3"/>
 
-        <circle
-          cx="12"
-          cy="12"
-          r="6"/>
+      <circle
+        cx="12"
+        cy="12"
+        r="6"/>
 
-        <path d="M10 12h.01"/>
-        <path d="M14 12h.01"/>
+      <path d="M10 12h.01"/>
+      <path d="M14 12h.01"/>
 
-      </svg>
     </Tabler>
   }
 }

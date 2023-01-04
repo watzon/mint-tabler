@@ -1,33 +1,40 @@
 component Tabler.IconCameraOff {
+  property scale : Number = 1
+  property animation : Tabler.Animation = Tabler.Animation::None
+  property speed : Tabler.Speed = Tabler.Speed::Slow
+  property hover : Bool = false
+  property flip : Tabler.Flip = Tabler.Flip::None
+  property stroke : String = "currentColor"
+  property fill : String = "none"
+  property label : String = ""
+  property title : String = ""
+
   fun render : Html {
-    <Tabler>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-camera-off"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
+    <Tabler
+      scale={scale}
+      animation={animation}
+      speed={speed}
+      hover={hover}
+      flip={flip}
+      stroke={stroke}
+      fill={fill}
+      label={label}
+      title={title}>
 
-        <path
-          stroke="none"
-          d="M0 0h24v24H0z"
-          fill="none"/>
+      <path
+        stroke="none"
+        d="M0 0h24v24H0z"
+        fill="none"/>
 
-        <path d="M8.29 4.296a1 1 0 0 1 .71 -.296h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v8m-1.179 2.824c-.25 .113 -.528 .176 -.821 .176h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h1c.292 0 .568 -.062 .818 -.175"/>
-        <path d="M10.436 10.44a3 3 0 1 0 4.126 4.122"/>
+      <path d="M8.29 4.296a1 1 0 0 1 .71 -.296h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v8m-1.179 2.824c-.25 .113 -.528 .176 -.821 .176h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h1c.292 0 .568 -.062 .818 -.175"/>
+      <path d="M10.436 10.44a3 3 0 1 0 4.126 4.122"/>
 
-        <line
-          x1="3"
-          y1="3"
-          x2="21"
-          y2="21"/>
+      <line
+        x1="3"
+        y1="3"
+        x2="21"
+        y2="21"/>
 
-      </svg>
     </Tabler>
   }
 }

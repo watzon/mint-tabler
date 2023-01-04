@@ -1,40 +1,47 @@
 component Tabler.IconBoxPadding {
+  property scale : Number = 1
+  property animation : Tabler.Animation = Tabler.Animation::None
+  property speed : Tabler.Speed = Tabler.Speed::Slow
+  property hover : Bool = false
+  property flip : Tabler.Flip = Tabler.Flip::None
+  property stroke : String = "currentColor"
+  property fill : String = "none"
+  property label : String = ""
+  property title : String = ""
+
   fun render : Html {
-    <Tabler>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-box-padding"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
+    <Tabler
+      scale={scale}
+      animation={animation}
+      speed={speed}
+      hover={hover}
+      flip={flip}
+      stroke={stroke}
+      fill={fill}
+      label={label}
+      title={title}>
 
-        <path
-          stroke="none"
-          d="M0 0h24v24H0z"
-          fill="none"/>
+      <path
+        stroke="none"
+        d="M0 0h24v24H0z"
+        fill="none"/>
 
-        <rect
-          x="4"
-          y="4"
-          width="16"
-          height="16"
-          rx="2"/>
+      <rect
+        x="4"
+        y="4"
+        width="16"
+        height="16"
+        rx="2"/>
 
-        <path d="M8 16v.01"/>
-        <path d="M8 12v.01"/>
-        <path d="M8 8v.01"/>
-        <path d="M16 16v.01"/>
-        <path d="M16 12v.01"/>
-        <path d="M16 8v.01"/>
-        <path d="M12 8v.01"/>
-        <path d="M12 16v.01"/>
+      <path d="M8 16v.01"/>
+      <path d="M8 12v.01"/>
+      <path d="M8 8v.01"/>
+      <path d="M16 16v.01"/>
+      <path d="M16 12v.01"/>
+      <path d="M16 8v.01"/>
+      <path d="M12 8v.01"/>
+      <path d="M12 16v.01"/>
 
-      </svg>
     </Tabler>
   }
 }

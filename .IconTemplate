@@ -1,0 +1,7 @@
+component IconTemplate {
+  fun render : Html {
+    <Tabler>
+      SVG HERE
+    </Tabler>
+  }
+}

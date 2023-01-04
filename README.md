@@ -28,6 +28,7 @@ Search for the icon you want to use on the [Tabler](https://tabler-icons.io/) we
 ## Properties
 
 Icons can be modified and styled in several different ways using the following properties.
+
 Note: _Items marked with `(*)` are not in a working condition yet._
 
 ### scale
